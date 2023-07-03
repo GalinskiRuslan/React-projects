@@ -1,0 +1,94 @@
+.card-container {
+  display: flex;
+  width: 520px;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin: 15px;
+  padding: 10px;
+}
+.card-container:hover {
+  border: 1px solid #208ad9;
+}
+.card-logo {
+  padding-top: 5px;
+}
+.card-set {
+  display: flex;
+  align-items: center;
+}
+.card-set-edit {
+  margin-right: 11px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.card-set-delete {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.card-set-delete:hover {
+  background-color: azure;
+}
+.card-set-edit:hover {
+  background-color: azure;
+}
+.dialog-delete-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #486377;
+  display: flex;
+  justify-content: center;
+}
+.dialog-button-done {
+  color: #2991dc;
+  padding: 10px 56px;
+  background: #ffffff;
+  border: 1px solid #2991dc;
+  border-radius: 4px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.dialog-button-done:hover {
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.4);
+}
+.dialog-button-accept {
+  background: #2991dc;
+  border-radius: 4px;
+  width: 285px;
+  color: #ffffff;
+  padding: 10px 48px;
+  border: none;
+  cursor: pointer;
+}
+.dialog-button-accept:hover {
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.4);
+}
+.nav-tabs .nav-link {
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  background: #f2f2f2 !important;
+  border: none !important;
+  margin: 0 12px !important;
+  width: 159px !important;
+  color: #262626;
+}
+.nav-link.active {
+  color: #ffffff !important;
+  background-color: #005da1 !important;
+  border: none !important;
+  border-radius: 5px !important;
+}
+.nav-tabs {
+  border: none !important;
+}
+.form-button {
+  background: #009a3e;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 12px 45px;
+  border: none;
+  margin: auto;
+  display: flex;
+}
