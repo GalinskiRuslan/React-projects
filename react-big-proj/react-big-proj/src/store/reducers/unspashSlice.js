@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { feachPhotos } from "./actionCreators";
+import { feachPhotos, feachSearchPhotos } from "./actionCreators";
 
 const initalState = {
   photos: [],
@@ -22,6 +22,19 @@ export const unspashSlice = createSlice({
       state.photos = action.payload;
     },
     [feachPhotos.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+    [feachSearchPhotos.pending]: (state) => {
+      state.isLoading = true;
+      state.error = "";
+    },
+    [feachSearchPhotos.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.error = "";
+      state.photos = action.payload;
+    },
+    [feachSearchPhotos.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     },

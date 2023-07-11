@@ -15,10 +15,10 @@ export const unspashAPI = createApi({
     }),
     feachSearchPhoto: builder.query({
       query: (search, page) => ({
-        url: "/search/photos",
+        url: "/search/photos/",
         params: {
           page,
-          search,
+          query: search,
           client_id: "mRM4BS17oxyPLqhYQIsu0QC9RxLWn8V8O2cB0BOcBFI",
         },
       }),

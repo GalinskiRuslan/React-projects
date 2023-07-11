@@ -15,3 +15,16 @@ code {
   max-width: 1420px;
   margin: 0 auto;
 }
+.nav-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+}
+.active {
+  color: #3c0fa5;
+}
+.ingleimg {
+  max-width: 80%;
+  text-align: center;
+}

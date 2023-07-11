@@ -1,35 +1,25 @@
-import React, { useEffect } from "react";
-import Modal from "./components/ui/modal/Modal";
-import { useDispatch, useSelector } from "react-redux";
-import { feachPhotos } from "./store/reducers/actionCreators";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import RandomPhotos from "./components/RandomPhotos/RandomPhotos";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RandomPhotosWithSlice from "./components/RandomPhotos/RandomPhotosWithSlice";
+import { Layout } from "./components/Layout/Layout";
+import HomePage from "./components/HomePage/HomePage";
+import SinglePhoto from "./components/SinglePhoto/SinglePhoto";
 
 function App() {
-  /* const [modal, setModal] = React.useState(false); */
-  const { photos } = useSelector((state) => state.unspashSlice);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(feachPhotos());
-  }, []);
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>Hello world!</div>,
-    },
-  ]);
-
   return (
     <div className="App container">
-      <button onClick={() => console.log(photos)}></button>
-
-      <BrowserRouter>
-        <Route path="/" exact></Route>
-        <Route path="/random-photo" exact>
-          <RandomPhotos></RandomPhotos>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/unspashApi" element={<RandomPhotos />} />
+          <Route
+            path="/unspashApiWithSlice"
+            element={<RandomPhotosWithSlice />}
+          />
+          <Route path="/unspashApi/:id" element={<SinglePhoto />} />
         </Route>
-      </BrowserRouter>
+      </Routes>
     </div>
   );
 }
