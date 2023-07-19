@@ -5,6 +5,7 @@ import RandomPhotosWithSlice from "./components/RandomPhotos/RandomPhotosWithSli
 import { Layout } from "./components/Layout/Layout";
 import HomePage from "./components/HomePage/HomePage";
 import SinglePhoto from "./components/SinglePhoto/SinglePhoto";
+import SearchPhoto from "./components/SearchPhoto/SearchPhoto";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             element={<RandomPhotosWithSlice />}
           />
           <Route path="/unspashApi/:id" element={<SinglePhoto />} />
+          <Route path="/unspashApiSearch" element={<SearchPhoto />} />
         </Route>
       </Routes>
     </div>

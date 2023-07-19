@@ -9,8 +9,8 @@ import {
 
 const RandomPhotosWithSlice = () => {
   const [inputValue, setInputValue] = useState("");
-  const [searchPage, setSearchPage] = useState(1);
-  const { photos, isLoading, error } = useSelector(
+ /*  const [searchPage, setSearchPage] = useState(1); */
+  const { photos, allDataSearch, isLoading, error } = useSelector(
     (state) => state.unspashSlice
   );
   const dispath = useDispatch();
@@ -24,11 +24,12 @@ const RandomPhotosWithSlice = () => {
       <input type="text" onChange={(e) => setInputValue(e.target.value)} />
       <button
         onClick={() => {
-          dispath(feachSearchPhotos(inputValue));
+          dispath(feachSearchPhotos(inputValue, 1));
         }}
       >
         Поиск
       </button>
+      <button onClick={() => console.log(allDataSearch)}>123</button>
       <div className={st.container}>
         {isLoading && <div>Loading...</div>}
         {error && <div>{error}</div>}

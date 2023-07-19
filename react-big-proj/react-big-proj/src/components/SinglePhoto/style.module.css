@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+.authorPhoto {
+  padding: 20px;
+  border-radius: 50%;
+}
+.mainCont {
+  padding: 80px 40px;
+}
+.imgContainer {
+  width: 100%;
+  text-align: center;
+}

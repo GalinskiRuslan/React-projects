@@ -3,6 +3,7 @@ import { feachPhotos, feachSearchPhotos } from "./actionCreators";
 
 const initalState = {
   photos: [],
+  allDataSearch: [],
   isLoading: false,
   error: "",
 };
@@ -32,7 +33,8 @@ export const unspashSlice = createSlice({
     [feachSearchPhotos.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = "";
-      state.photos = action.payload;
+      state.photos = action.payload.results;
+      state.allDataSearch = action.payload;
     },
     [feachSearchPhotos.rejected]: (state, action) => {
       state.isLoading = false;

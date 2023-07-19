@@ -16,12 +16,12 @@ export const feachPhotos = createAsyncThunk(
 );
 export const feachSearchPhotos = createAsyncThunk(
   "unspash/SearchPhotos",
-  async (searchValue, thinkAPI) => {
+  async (searchValue, page, thinkAPI) => {
     try {
       const response = await axios.get(
-        `https://api.unsplash.com//search/photos/?query=${searchValue}&client_id=mRM4BS17oxyPLqhYQIsu0QC9RxLWn8V8O2cB0BOcBFI`
+        `https://api.unsplash.com//search/photos/?page=${page}&query=${searchValue}&client_id=mRM4BS17oxyPLqhYQIsu0QC9RxLWn8V8O2cB0BOcBFI`
       );
-      return response.data.results;
+      return response.data;
     } catch (error) {
       return thinkAPI.rejectWithValue(error);
     }

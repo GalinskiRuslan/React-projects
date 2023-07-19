@@ -57,56 +57,7 @@
   padding: 10px 45px;
   font-weight: 700;
 }
-.searchBtn {
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #000;
-}
-.modalImg {
-  width: 60%;
-}
-.modalConteiner {
-  display: flex;
-  max-height: 50%;
-}
-.imgModal {
-  width: 100%;
-}
-.left {
-  width: 40%;
-}
-.closeBtn {
-  background: transparent;
-  position: absolute;
-  border-radius: 100%;
-  cursor: pointer;
-  padding: 0;
-  right: 3px;
-  top: 3px;
-  width: 32px;
-  height: 32px;
-}
-.profilePhoto {
-  max-width: 64px;
-  border-radius: 100%;
-}
-.aboutInfo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-.aboutInfo svg {
-  margin: 0 5px;
-}
-.aboutInfoCont {
-  display: flex;
-  flex-wrap: wrap;
-}
-.downloadBtn {
-  cursor: pointer;
-  display: flex;
-}
+
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -119,11 +70,5 @@
 @media screen and (max-width: 640px) {
   .container {
     grid-template-columns: 1fr;
-  }
-  .modalConteiner {
-    flex-direction: column;
-  }
-  .modalImg {
-    width: 100%;
   }
 }

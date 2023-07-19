@@ -15,11 +15,74 @@ code {
   max-width: 1420px;
   margin: 0 auto;
 }
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container-mob {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  z-index: 17;
+}
+.overflover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.mob-menu {
+  position: fixed;
+  z-index: 15;
+  top: 5%;
+  right: 5%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
 .nav-link {
   font-size: 20px;
   text-decoration: none;
   color: #000;
   margin: 0 15px;
+}
+.nav-link-mob {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  margin: 10px 0;
 }
 .active {
   color: #3c0fa5;
@@ -27,4 +90,46 @@ code {
 .ingleimg {
   max-width: 80%;
   text-align: center;
+}
+.loaderOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.5);
+  z-index: 30;
+}
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 45%;
+  z-index: 50;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #ff3d00 inset;
+  animation: rotate 2s linear infinite;
+}
+.singleimg{
+  width: 90%;
+  padding: 10px;
+}
+@media screen and (max-width: 780px) {
+  .header-container {
+    display: none;
+  }
+  .container-mob {
+    display: inline-block;
+  }
 }
