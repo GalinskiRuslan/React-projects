@@ -82,6 +82,9 @@ const RandomPhotos = () => {
             />
             <p>Author: {modalData?.user.name}</p>
             <p>Author instagramm: {modalData?.user.instagram_username}</p>
+            <a target="_blank" href={modalData?.user.links.html}>
+              User in unsplash
+            </a>
             <p>
               Description:
               {modalData?.description

@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/code .png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div className="header-container">
+        <img className="logo" src={logo} alt="logo" />
         <NavLink className="nav-link" to="/">
           Home
         </NavLink>
         <NavLink className="nav-link" to="/unspashApi">
-          unspashApi
+          unsplashApi
         </NavLink>
       </div>
       <div
@@ -37,7 +39,7 @@ const Header = () => {
               to="/unspashApi"
               onClick={() => setOpen(false)}
             >
-              unspashApi
+              unsplashApi
             </NavLink>
           </div>
         </div>
