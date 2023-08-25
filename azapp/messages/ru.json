@@ -1,0 +1,16 @@
+{
+  "Index": {
+    "title": "azapp ru",
+    "footer": "Это футер"
+  },
+  "navigation": {
+    "howget": "Как получить",
+    "howreplay": "Как погасить",
+    "about": "О нас",
+    "document": "Документы",
+    "actii": "Акции",
+    "contact": "Контакты",
+    "login": "Войти",
+    "registr": "Регистрация"
+  }
+}

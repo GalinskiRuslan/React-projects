@@ -1,0 +1,16 @@
+{
+  "Index": {
+    "title": "azapp",
+    "footer": "This is footer"
+  },
+  "navigation": {
+    "howget": "how to get",
+    "howreplay": "how to replay",
+    "about": "about",
+    "document": "documents",
+    "actii": "action",
+    "contact": "contact",
+    "login": "login",
+    "registr": "Registration"
+  }
+}
