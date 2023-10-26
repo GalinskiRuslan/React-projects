@@ -1,0 +1,62 @@
+:root {
+  --slider-width: 3;
+}
+.slider {
+  max-width: 80%;
+  height: 380px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.slide_line {
+  /*   width: calc(100% * var(--slider-width)); */
+  display: flex;
+  /*  position: relative; */
+  transition: 0.5s;
+}
+.slide_item {
+  width: 230px;
+  height: 380px;
+}
+.slider_item_active {
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  z-index: 50;
+  transition: 0.5s;
+  background: green;
+}
+.slider_item_prev {
+  position: absolute;
+  left: 10%;
+  z-index: 10;
+  background: #270db9;
+  transition: 0.5s;
+}
+.slider_item_next {
+  background: #0de6ee;
+  position: absolute;
+  left: 70%;
+  z-index: 10;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.slider_item_left {
+  background: #ff0000;
+  position: absolute;
+  opacity: 0;
+  transition: 0.8s;
+  z-index: 1;
+  left: 50%;
+  margin-left: -135px;
+}
+.slider_item_right {
+  position: absolute;
+  background: #5c0ab9;
+  transition: 0.5s;
+  opacity: 0;
+  transition: 0.8s;
+  z-index: 1;
+  left: 50%;
+  margin-left: -135px;
+}
