@@ -1,0 +1,24 @@
+.code__input {
+  height: 125px;
+  font-weight: 800;
+  font-size: 72px;
+  border: 1px solid rgba(162, 162, 201, 0.47);
+  color: rgba(112, 128, 169, 0.57);
+  border-radius: 10px;
+  border: 1px solid #a2a2c9;
+  margin: 0 5px;
+  box-sizing: border-box;
+  width: 70px;
+  padding: 15px 10px;
+  text-align: center;
+  outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .code__input {
+    width: 48px;
+    font-size: 54px;
+    padding: 5px;
+    height: 90px;
+  }
+}

@@ -1,0 +1,21 @@
+.progress {
+  display: flex;
+  justify-content: center;
+}
+.progress div {
+  width: 116px;
+  height: 8px;
+  border-radius: 40px;
+  background: #d9d9d9;
+  margin: 0 10px;
+}
+.progress div.active {
+  border-radius: 16px;
+  background: var(
+    --liner-green,
+    linear-gradient(95deg, #d6ff13 0%, #add100 100%)
+  );
+  width: 116px;
+  height: 16px;
+  margin-top: -4px;
+}

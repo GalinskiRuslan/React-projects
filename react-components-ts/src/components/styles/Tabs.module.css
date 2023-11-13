@@ -1,0 +1,206 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 50px;
+  border-radius: 24px;
+  overflow: hidden;
+  padding-bottom: 0;
+  z-index: 50;
+}
+
+.activeTab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-animation: tracking-in-expand-fwd-top 0.6s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand-fwd-top 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
+.tab {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-animation: tracking-out-expand-fwd-bottom 0.6s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: tracking-out-expand-fwd-bottom 0.6s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.tabs_img {
+  width: 70%;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 420px;
+}
+.activeNav {
+  border-radius: 24px;
+  background: linear-gradient(95deg, #d6ff13 0%, #add100 100%);
+  padding: 20px;
+  border: none;
+  width: 30%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buttonsTab {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  z-index: 100;
+  gap: 20px;
+}
+.tabsNumber {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3dd4c3;
+  border-radius: 100%;
+}
+.nav {
+  border-radius: 24px;
+  background: linear-gradient(
+    95deg,
+    rgba(86, 255, 236, 0.5) 0%,
+    rgba(22, 169, 152, 0.5) 100%
+  );
+  padding: 20px;
+  border: none;
+  width: 30%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigation {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  width: 97%;
+  justify-content: space-between;
+  z-index: 100;
+  margin: 0 20px;
+  margin-top: -10px;
+}
+.title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.navText {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.tab_back {
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tracking-out-expand-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px) translateY(200px);
+    transform: translateZ(300px) translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes tracking-out-expand-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px) translateY(200px);
+    transform: translateZ(1100px) translateY(1200px);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tab_back {
+    display: none;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: linear-gradient(180deg, #f7ffd3 0%, #fcffee 100%);
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 0;
+    z-index: 50;
+  }
+  .tabsNumber {
+    display: none;
+  }
+  .content {
+    height: 220px;
+  }
+  .navText {
+    font-size: 14px;
+  }
+  .buttonsTab {
+    grid-template-columns: 1fr;
+  }
+  .navigation {
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    margin-top: 10px;
+  }
+}

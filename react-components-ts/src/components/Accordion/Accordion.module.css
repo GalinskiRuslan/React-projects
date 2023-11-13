@@ -1,0 +1,37 @@
+.card {
+  border-radius: 16px;
+  background: #f2f2f2;
+  list-style: none;
+  padding: 23px 40px;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.card_active {
+  border-radius: 16px;
+  background: #f2f2f2;
+  list-style: none;
+  padding: 23px 40px;
+  transition: 0.5s;
+  box-shadow: 4px 4px 6px rgba(16, 109, 140, 0.25);
+  margin: 10px 0;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #000;
+  font-weight: 600;
+}
+.collapse {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.collapse_active {
+  height: auto;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.description {
+  padding: 40px 0;
+}

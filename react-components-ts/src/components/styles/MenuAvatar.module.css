@@ -1,0 +1,47 @@
+.avatar_btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.header_links {
+  position: absolute;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.15),
+    -4px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  margin-left: -50px;
+  z-index: 999;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s;
+  width: 210px;
+}
+.header_links.active {
+  height: 120%;
+}
+.header_link {
+  padding: 15px;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_link:hover {
+  background: #f2f2f2;
+}
+.container {
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .header_link {
+    padding: 10px;
+  }
+}
